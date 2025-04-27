@@ -1,0 +1,320 @@
+/* App.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+}
+
+/* Futuristic theme enhancements */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f2027, #2c5364, #1a2980, #26d0ce);
+  color: #e0e0e0;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  letter-spacing: 0.05em;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(20, 20, 40, 0.95);
+  padding: 0 32px;
+  height: 64px;
+  box-shadow: 0 2px 32px 0 rgba(38, 208, 206, 0.10);
+  border-bottom: 1.5px solid #1a2980;
+}
+
+.navbar-brand, .nav-brand {
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #26d0ce;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 8px #26d0ce, 0 0 2px #fff;
+}
+
+.navbar-links, .nav-options {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a, .nav-options a {
+  color: #e0e0e0;
+  font-size: 1.1em;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-shadow: 0 0 4px #1a2980;
+}
+
+.navbar-links a:hover, .nav-options a:hover {
+  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  color: #fff;
+  box-shadow: 0 0 12px #26d0ce99;
+}
+
+h1, h2, h3 {
+  color: #26d0ce;
+  text-shadow: 0 0 8px #26d0ce, 0 0 2px #fff;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #26d0ce 0%, #1a2980 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  font-family: inherit;
+  box-shadow: 0 0 16px #26d0ce99, 0 2px 8px #0006;
+  transition: background 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  box-shadow: 0 0 32px #26d0cecc, 0 4px 16px #0009;
+}
+
+.card, .glass, form {
+  background: rgba(44, 83, 100, 0.25) !important;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(38, 208, 206, 0.18);
+  padding: 24px;
+  margin: 16px 0;
+}
+
+input, select, textarea {
+  background: rgba(30, 30, 60, 0.7);
+  border: 1px solid #26d0ce;
+  border-radius: 8px;
+  color: #e0e0e0;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 8px #26d0ce;
+}
+
+a {
+  color: #26d0ce;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #26d0ce;
+}
+
+/* Students Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* reduced vertical gap */
+  background: transparent;
+  margin: 0.5rem 0 1.5rem 0; /* reduced top and bottom margin */
+  box-shadow: none;
+}
+
+th, td {
+  padding: 16px 28px;
+  text-align: left;
+  background: rgba(44, 83, 100, 0.45);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.08em;
+  transition: background 0.2s;
+}
+
+th {
+  background: rgba(26, 41, 128, 0.85);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  border-bottom: 2px solid #26d0ce;
+}
+
+tr:hover td {
+  background: rgba(38, 208, 206, 0.10);
+}
+
+/* Center Add Student Button below the table */
+.student-list {
+  /* Remove centering styles */
+  display: block;
+  margin-left: 24px;
+  margin-right: 24px;
+  width: auto;
+  max-width: none;
+}
+
+.student-list-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.add-student-btn-centered {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0.5rem auto;
+}
+
+.student-list h2 {
+  text-align: left;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.student-list table {
+  margin: 0 0 1.5rem 0;
+}
+
+/* Hide the default Add button above the table */
+.student-list > a > button {
+  display: none;
+}
+
+.home,
+.add-student,
+.edit-student,
+.student-list {
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 0;
+}
+
+.add-student,
+.edit-student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-student form,
+.edit-student form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 420px;
+  min-width: 320px;
+  align-items: center;
+  background: rgba(30, 32, 40, 0.92);
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(38, 208, 206, 0.10);
+  margin: 0 auto;
+}
+
+.add-student form input,
+.add-student form select,
+.add-student form label,
+.edit-student form input,
+.edit-student form select,
+.edit-student form label {
+  width: 100%;
+  max-width: 340px;
+  font-size: 1em;
+  margin: 0 auto;
+  display: block;
+}
+
+.add-student form button,
+.edit-student form button {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 340px;
+  align-self: center;
+}
+
+.add-student-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.home-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  margin: 40px 0 0 0;
+  flex-wrap: wrap;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(44, 83, 100, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(38, 208, 206, 0.10);
+  padding: 32px 36px 24px 36px;
+  text-decoration: none;
+  color: #e0e0e0;
+  min-width: 180px;
+  min-height: 180px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.home-card:hover {
+  background: rgba(38, 208, 206, 0.15);
+  box-shadow: 0 8px 32px 0 #26d0ce55;
+  color: #26d0ce;
+  transform: translateY(-6px) scale(1.04);
+}
+
+.home-card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #26d0ce;
+  filter: drop-shadow(0 0 8px #26d0ce55);
+}
+
+.home-card span {
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.home-title {
+  text-align: center;
+  width: 100%;
+  margin: 40px auto 32px auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .home-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .home-card {
+    min-width: 80vw;
+    width: 100%;
+  }
+}
